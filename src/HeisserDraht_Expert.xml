@@ -1,10 +1,10 @@
 <export xmlns="http://de.fhg.iais.roberta.blockly">
   <program>
     <block_set xmlns="http://de.fhg.iais.roberta.blockly" robottype="calliope" xmlversion="2.0" description="" tags="">
-      <instance x="-83" y="-24">
+      <instance x="667" y="-126">
         <block type="robControls_start" id="gva?]}EO#h@{XZK-VDoh" intask="true" deletable="false">
           <mutation declare="true"></mutation>
-          <field name="DEBUG">TRUE</field>
+          <field name="DEBUG"></field>
           <statement name="ST">
             <block type="robGlobalVariables_declare" id="}QNLsEo3SqRqDWR:oNiB" intask="true" deletable="false" movable="false">
               <mutation next="true" declaration_type="Boolean"></mutation>
@@ -57,11 +57,31 @@
               </value>
             </block>
             <block type="robGlobalVariables_declare" id="m?S%4#^V,NIcC@O/Xk%y" intask="true" deletable="false" movable="false">
-              <mutation next="false" declaration_type="Number"></mutation>
+              <mutation next="true" declaration_type="Number"></mutation>
               <field name="VAR">letzterKontaktZaehler</field>
               <field name="TYPE">Number</field>
               <value name="VALUE">
                 <block type="math_number" id="Ou({b#PE#72]QwdkujIj" intask="true">
+                  <field name="NUM">0</field>
+                </block>
+              </value>
+            </block>
+            <block type="robGlobalVariables_declare" id="*Yhjr]HuxJ(GV;Z~)dON" intask="true" deletable="false" movable="false">
+              <mutation next="true" declaration_type="Number"></mutation>
+              <field name="VAR">spielzeit</field>
+              <field name="TYPE">Number</field>
+              <value name="VALUE">
+                <block type="math_number" id="ePKU:=gQIMkDamvMG*95" intask="true">
+                  <field name="NUM">0</field>
+                </block>
+              </value>
+            </block>
+            <block type="robGlobalVariables_declare" id="+@X~;/PP|{:}xpNj=:M@" intask="true" deletable="false" movable="false">
+              <mutation next="false" declaration_type="Number"></mutation>
+              <field name="VAR">letzeSpielzeit</field>
+              <field name="TYPE">Number</field>
+              <value name="VALUE">
+                <block type="math_number" id="qnS+qIWOlEU+lBv}f9Np" intask="true">
                   <field name="NUM">0</field>
                 </block>
               </value>
@@ -74,8 +94,11 @@
               <mutation datatype="Boolean"></mutation>
               <field name="VAR">kontakt</field>
               <value name="VALUE">
-                <block type="mbedSensors_pin_isTouched" id="~#v#lXvu%Zy_u1QGmSSw" intask="true">
-                  <field name="PIN">0</field>
+                <block type="robSensors_pintouch_getSample" id="~#v#lXvu%Zy_u1QGmSSw" intask="true">
+                  <mutation mode="PRESSED"></mutation>
+                  <field name="MODE">PRESSED</field>
+                  <field name="SENSORPORT">0</field>
+                  <field name="SLOT"></field>
                 </block>
               </value>
             </block>
@@ -83,8 +106,11 @@
               <mutation datatype="Boolean"></mutation>
               <field name="VAR">start</field>
               <value name="VALUE">
-                <block type="mbedSensors_pin_isTouched" id="u~j|40[nvQ_nM=w3Zj/m" intask="true">
-                  <field name="PIN">1</field>
+                <block type="robSensors_pintouch_getSample" id="u~j|40[nvQ_nM=w3Zj/m" intask="true">
+                  <mutation mode="PRESSED"></mutation>
+                  <field name="MODE">PRESSED</field>
+                  <field name="SENSORPORT">1</field>
+                  <field name="SLOT"></field>
                 </block>
               </value>
             </block>
@@ -92,8 +118,11 @@
               <mutation datatype="Boolean"></mutation>
               <field name="VAR">ende</field>
               <value name="VALUE">
-                <block type="mbedSensors_pin_isTouched" id="T`!)Gs!)A3BI%7k%;YkB" intask="true">
-                  <field name="PIN">2</field>
+                <block type="robSensors_pintouch_getSample" id="T`!)Gs!)A3BI%7k%;YkB" intask="true">
+                  <mutation mode="PRESSED"></mutation>
+                  <field name="MODE">PRESSED</field>
+                  <field name="SENSORPORT">2</field>
+                  <field name="SLOT"></field>
                 </block>
               </value>
             </block>
@@ -101,8 +130,11 @@
               <mutation elseif="2"></mutation>
               <repetitions>
                 <value name="IF0">
-                  <block type="mbedSensors_key_isPressed" id="6kMK~W%hv#OF5TY6aFV5" intask="true">
-                    <field name="KEY">button_a</field>
+                  <block type="robSensors_key_getSample" id="6kMK~W%hv#OF5TY6aFV5" intask="true">
+                    <mutation mode="PRESSED"></mutation>
+                    <field name="MODE">PRESSED</field>
+                    <field name="SENSORPORT">button_a</field>
+                    <field name="SLOT"></field>
                   </block>
                 </value>
                 <statement name="DO0">
@@ -124,10 +156,22 @@
                       </block>
                     </value>
                   </block>
+                  <block type="variables_set" id="kfF3Nf^tY4r^3h2/oho=" intask="true">
+                    <mutation datatype="Number"></mutation>
+                    <field name="VAR">spielzeit</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="?TrGR!zeR0|E+Iv|`qaQ" intask="true">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
                 </statement>
                 <value name="IF1">
-                  <block type="mbedSensors_key_isPressed" id="kig|920.iHDR65AYj7H6" intask="true">
-                    <field name="KEY">button_b</field>
+                  <block type="robSensors_key_getSample" id="kig|920.iHDR65AYj7H6" intask="true">
+                    <mutation mode="PRESSED"></mutation>
+                    <field name="MODE">PRESSED</field>
+                    <field name="SENSORPORT">button_b</field>
+                    <field name="SLOT"></field>
                   </block>
                 </value>
                 <statement name="DO1">
@@ -137,6 +181,23 @@
                       <block type="variables_get" id="F1r+_5p#MY)f5b`T[t9n" intask="true">
                         <mutation datatype="Number"></mutation>
                         <field name="VAR">letzterKontaktZaehler</field>
+                      </block>
+                    </value>
+                  </block>
+                  <block type="mbedActions_display_text" id="WWK,F{u|./(50Kwg?v@g" intask="true">
+                    <field name="TYPE">TEXT</field>
+                    <value name="OUT">
+                      <block type="text" id="1RvHV#uL@od]eAxlC#nP" intask="true">
+                        <field name="TEXT">Zeit:</field>
+                      </block>
+                    </value>
+                  </block>
+                  <block type="mbedActions_display_text" id="L_:0+xm+Z-R+Bazqh0I)" intask="true">
+                    <field name="TYPE">TEXT</field>
+                    <value name="OUT">
+                      <block type="variables_get" id="z;co{HxE1XUbvN1drG^D" intask="true">
+                        <mutation datatype="Number"></mutation>
+                        <field name="VAR">letzeSpielzeit</field>
                       </block>
                     </value>
                   </block>
@@ -156,6 +217,9 @@
                         <field name="BOOL">TRUE</field>
                       </block>
                     </value>
+                  </block>
+                  <block type="mbedSensors_timer_reset" id="5OwhIk(yhy!A/c?D_E=a" intask="true">
+                    <field name="SENSORPORT">1</field>
                   </block>
                 </statement>
               </repetitions>
@@ -228,6 +292,55 @@
                             </block>
                           </value>
                         </block>
+                        <block type="variables_set" id="AO9g//3xl)f)]G@^3bNs" intask="true">
+                          <mutation datatype="Number"></mutation>
+                          <field name="VAR">spielzeit</field>
+                          <value name="VALUE">
+                            <block type="math_arithmetic" id="p?,^#-lqaP8A[bW`I}~G" intask="true">
+                              <field name="OP">DIVIDE</field>
+                              <value name="A">
+                                <block type="robSensors_timer_getSample" id="t@X#pc8_+GLho/szuq=+" intask="true">
+                                  <mutation mode="VALUE"></mutation>
+                                  <field name="MODE">VALUE</field>
+                                  <field name="SENSORPORT">1</field>
+                                  <field name="SLOT"></field>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number" id="[#omBg23PO/walv+k)cI" intask="true">
+                                  <field name="NUM">1000</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                        <block type="variables_set" id="%aDW1]/U]?-%`C}@SDVx" intask="true">
+                          <mutation datatype="Number"></mutation>
+                          <field name="VAR">letzeSpielzeit</field>
+                          <value name="VALUE">
+                            <block type="variables_get" id="hWJMMZ+ucmkyv1/fc5Nx" intask="true">
+                              <mutation datatype="Number"></mutation>
+                              <field name="VAR">spielzeit</field>
+                            </block>
+                          </value>
+                        </block>
+                        <block type="mbedActions_display_text" id="`sXR@cw3#R4HKHd,jjm?" intask="true">
+                          <field name="TYPE">TEXT</field>
+                          <value name="OUT">
+                            <block type="text" id="Y+eJneMi*SUsVS@]vD|/" intask="true">
+                              <field name="TEXT">Zeit:</field>
+                            </block>
+                          </value>
+                        </block>
+                        <block type="mbedActions_display_text" id="Uia{N8,VVppZk{*]Mb!S" intask="true">
+                          <field name="TYPE">TEXT</field>
+                          <value name="OUT">
+                            <block type="variables_get" id="^agnM(y;0.@s6SE,d:Br" intask="true">
+                              <mutation datatype="Number"></mutation>
+                              <field name="VAR">spielzeit</field>
+                            </block>
+                          </value>
+                        </block>
                       </statement>
                       <value name="IF1">
                         <block type="variables_get" id="0-=c#yLh@[=G#S+}{Z{l" intask="true">
@@ -292,11 +405,6 @@
               </repetitions>
             </block>
           </statement>
-        </block>
-      </instance>
-      <instance x="247" y="761">
-        <block type="math_number" id="O:3_cP:f2UCJK3SXY(gx" intask="false">
-          <field name="NUM">1</field>
         </block>
       </instance>
     </block_set>
