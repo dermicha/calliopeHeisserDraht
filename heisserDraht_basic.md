@@ -5,8 +5,8 @@
 
 ## Material
 
-* [Calliope Mini](https://calliope.cc){:target="_blank"} 
-* [NEPOprog / Open Roberta LAB](https://lab.open-roberta.org){:target="_blank"}
+* [Calliope Mini](https://calliope.cc) 
+* [NEPOprog / Open Roberta LAB](https://lab.open-roberta.org)
 * 3 Kabel mit Krokodil-Klemmen
 * Kupferdraht (z.b. Schweissdraht, 1,2mm dick)
 * dicke Pappe / Eierkarton

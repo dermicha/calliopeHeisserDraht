@@ -1,7 +1,3 @@
----
-layout: page
-navigation_weight: 2
----
 # Heisser Draht
 
 Ein einfaches Calliope Spiel mit ein wenig Bastellspass.
@@ -13,7 +9,7 @@ Ein einfaches Calliope Spiel mit ein wenig Bastellspass.
 
 ## Vorraussetzungen
 
-* [Calliope Mini](http://calliope.cc){:target="_blank"}
-* [NEPOprog / Open Roberta LAB](https://lab.open-roberta.org){:target="_blank"}
+* [Calliope Mini](http://calliope.cc)
+* [NEPOprog / Open Roberta LAB](https://lab.open-roberta.org)
 
 [Apache Licence](LICENSE)
