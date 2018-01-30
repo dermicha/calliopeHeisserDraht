@@ -1,9 +1,9 @@
 # Heisser Draht
 
-Ein einfaches Calliope Spiel mit ein wenig Bastellspass
+Ein einfaches Calliope Spiel mit ein wenig Bastellspass.
 
-* [Heisser Draht einfache Version](heisserDraht_simple.md) 
-* [Heisser Draht Experten Version](heisserDraht_advanced.md)
+* [Heisser Draht Basis Version](heisserDraht_basic.md) 
+* [Heisser Draht Experten Version](heisserDraht_expert.md)
 
 ## Vorraussetzungen
 
