@@ -1,12 +1,12 @@
-# Heisse Draht (einfache Version)
+# Heisse Draht
 
 ## Ziel 
 ![Bild vom Prototypen](img/HeisserDraht_01.jpg)
 
 ## Material
 
-* Calliope Mini Board
-* NEPO Editor (https://lab.open-roberta.org)
+* [Calliope Mini](http://calliope.cc){:target="_blank"}
+* [NEPOprog / Open Roberta LAB](https://lab.open-roberta.org){:target="_blank"}
 * 3 Kabel mit Krokodilklemmen
 * Kupferdraht (z.b. Schweissdraht, 1,2mm dick)
 * dicke Pappe / Eierkarton
