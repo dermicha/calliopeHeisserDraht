@@ -1,4 +1,4 @@
-# Heisse Draht (einfache Verison)
+# Heisse Draht (einfache Version)
 
 ## Ziel 
 ![Bild vom Prototypen](img/HeisserDraht_01.jpg)
@@ -13,7 +13,7 @@
 
 ## Plan
 
-![](img/HeisserDrahtPlan_V1.png)
+![Plan](img/HeisserDrahtPlan_V1.png)
 
 * Biege aus dem Kupferdraht den "heissen Draht" und befestige diesen an der Pappe dem Eierkarton
 * Verninde P0 am Calliope Mini mit eienm Kroko-Kabel mit dem heissen Draht
@@ -32,7 +32,7 @@
 * "=" (Logik)
 * "gib digitalen Wert" (Sensoren) 
 
-###Tipps zum erstellen des Programms
+### Tipps zum erstellen des Programms
 wird ein Kontakt zum "heissen Draht" hergestellt liefert "gib digitalen Wert" von 
 
 ## Lösung
@@ -40,4 +40,6 @@ wird ein Kontakt zum "heissen Draht" hergestellt liefert "gib digitalen Wert" vo
 ### NEPO Programm
 
 ![](img/HeisserDraht_V1.png)
+
+## Source Code
 (Download)[./src/HeisserDrahtPlan_V1.xml]
