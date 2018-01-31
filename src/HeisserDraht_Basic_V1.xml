@@ -1,10 +1,10 @@
 <export xmlns="http://de.fhg.iais.roberta.blockly">
   <program>
     <block_set xmlns="http://de.fhg.iais.roberta.blockly" robottype="calliope" xmlversion="2.0" description="" tags="">
-      <instance x="122" y="46">
+      <instance x="797" y="249">
         <block type="robControls_start" id="Ki(oUP]{UK_wYIVDuI.B" intask="true" deletable="false">
           <mutation declare="true"></mutation>
-          <field name="DEBUG">TRUE</field>
+          <field name="DEBUG"></field>
           <statement name="ST">
             <block type="robGlobalVariables_declare" id="yS.)sNP`lmPLm,7y?ZQA" intask="true" deletable="false" movable="false">
               <mutation next="false" declaration_type="Number"></mutation>
@@ -33,8 +33,11 @@
               <mutation else="1"></mutation>
               <repetitions>
                 <value name="IF0">
-                  <block type="mbedSensors_pin_isTouched" id="48ybE?wPuZ%WUgNKSw.^" intask="true">
-                    <field name="PIN">0</field>
+                  <block type="robSensors_pintouch_getSample" id="48ybE?wPuZ%WUgNKSw.^" intask="true">
+                    <mutation mode="PRESSED"></mutation>
+                    <field name="MODE">PRESSED</field>
+                    <field name="SENSORPORT">0</field>
+                    <field name="SLOT"></field>
                   </block>
                 </value>
                 <statement name="DO0">
@@ -92,8 +95,11 @@
             </block>
             <block type="robControls_if" id="t{V9[CKUU8_]T;;b/nz0" intask="true">
               <value name="IF0">
-                <block type="mbedSensors_key_isPressed" id="5mnuNKi@)v(+oAN3M~S[" intask="true">
-                  <field name="KEY">button_a</field>
+                <block type="robSensors_key_getSample" id="5mnuNKi@)v(+oAN3M~S[" intask="true">
+                  <mutation mode="PRESSED"></mutation>
+                  <field name="MODE">PRESSED</field>
+                  <field name="SENSORPORT">button_a</field>
+                  <field name="SLOT"></field>
                 </block>
               </value>
               <statement name="DO0">
@@ -106,15 +112,11 @@
                     </block>
                   </value>
                 </block>
-                <block type="robMath_change" id="@agycHRni9UE{Un!g|r%" intask="true">
-                  <value name="VAR">
-                    <block type="variables_get" id=";U5uAqe-aYY(iEd}YIso" intask="true">
-                      <mutation datatype="Number"></mutation>
-                      <field name="VAR">kontakte</field>
-                    </block>
-                  </value>
-                  <value name="DELTA">
-                    <block type="math_number" id="bJjs+TXfL/M%z7Vh3F5L" intask="true">
+                <block type="variables_set" id="CeigRAGfP=7@iyOi*@bV" intask="true">
+                  <mutation datatype="Number"></mutation>
+                  <field name="VAR">kontakte</field>
+                  <value name="VALUE">
+                    <block type="math_number" id="Twl:CpJTiI#-Qm6qC:2?" intask="true">
                       <field name="NUM">0</field>
                     </block>
                   </value>
@@ -127,9 +129,9 @@
     </block_set>
   </program>
   <config>
-    <block_set xmlns="http://de.fhg.iais.roberta.blockly" robottype="calliope" xmlversion="2.0" description="" tags="">
+    <block_set robottype="calliope" xmlversion="2.0" description="" tags="" xmlns="http://de.fhg.iais.roberta.blockly">
       <instance x="138" y="88">
-        <block type="mbedBrick_Calliope-Brick" id="1" intask="true"></block>
+        <block type="mbedBrick_Calliope-Brick" id="1" intask="true"/>
       </instance>
     </block_set>
   </config>
